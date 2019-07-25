@@ -14,7 +14,7 @@ int main(int argc, char** argv)
   Mat grey_img;
   cvtColor(img, grey_img, COLOR_BGR2GRAY);
   // Generate the histogram
-  Histogram hist = Histogram(img_input);
+  Histogram hist = Histogram(img);
   Mat histImage = hist.generate();
   // Save histogram
   string hist_name = "../images/hist_" + img_name;

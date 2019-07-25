@@ -9,9 +9,9 @@ using namespace cv;
 
 class Histogram {
 	private:
-	string filename = "";
+	Mat image;
 	public:
-	Histogram(string f);
+	Histogram(Mat m);
 	Mat generate();
 };
 

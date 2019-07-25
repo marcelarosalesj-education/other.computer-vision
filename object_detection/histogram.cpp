@@ -3,13 +3,12 @@ Source: https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/histogram_c
 */
 #include "histogram.h"
 
-Histogram::Histogram(string f){
-	filename = f;
+Histogram::Histogram(Mat m){
+	image = m;
 }
 Mat Histogram::generate() {
-	cout << "Generating histogram of "<< filename << endl;
 	Mat src, dst;
-	src = imread(filename);
+	src = image;
 	
 	/// Separate the image in 3 places ( B, G and R )
 	vector<Mat> bgr_planes;
