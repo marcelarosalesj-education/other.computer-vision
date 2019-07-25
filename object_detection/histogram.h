@@ -10,9 +10,11 @@ using namespace cv;
 class Histogram {
 	private:
 	Mat image;
+	Mat hist;
 	public:
 	Histogram(Mat m);
-	Mat generate();
+	void generate();
+	Mat get();
 };
 
 #endif

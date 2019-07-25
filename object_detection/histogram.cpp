@@ -6,7 +6,8 @@ Source: https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/histogram_c
 Histogram::Histogram(Mat m){
 	image = m;
 }
-Mat Histogram::generate() {
+
+void Histogram::generate() {
 	Mat src, dst;
 	src = image;
 	
@@ -58,5 +59,13 @@ Mat Histogram::generate() {
                                      Scalar( 0, 0, 255), 2, 8, 0  );
 	    }
 	}
-	return histImage;
+	hist = histImage;
+}
+
+
+Mat Histogram::get() {
+	if(hist.empty()){
+		cout << "empty" << endl;
+	}
+	return hist;
 }
