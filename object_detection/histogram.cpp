@@ -44,6 +44,11 @@ void Histogram::generate() {
 		normalize(g_hist, g_hist, 0, histImage.rows, NORM_MINMAX, -1, Mat() );
 		normalize(r_hist, r_hist, 0, histImage.rows, NORM_MINMAX, -1, Mat() );
 	}
+    /*cout << b_hist.rows << endl;
+    cout << b_hist.cols << endl;
+    for(int i=0; i< b_hist.rows; i++){
+        cout << b_hist.at<float>(0, i) << endl;
+    }*/
 	/// Draw for each channel
 	for( int i = 1; i < histSize; i++ )
 	{
