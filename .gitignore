@@ -3,3 +3,4 @@
 *.jpeg
 *.out
 .DS_Store
+*.o
