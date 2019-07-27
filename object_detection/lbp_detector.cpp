@@ -4,6 +4,7 @@
 #include <opencv2/opencv.hpp>
 #include <string>
 #include "lbp.h"
+#include "histogram.h"
 #include "utilities.cpp"
 
 using namespace std;
@@ -27,6 +28,13 @@ int main(int argc, char** argv) {
     detector.generate();
     Mat result = detector.get();
     imwrite("../results/lbp_result_"+img_name, result);
+    // Generate the histogram
+    Histogram hist = Histogram(result);
+    hist.generate();
+    Mat histImage = hist.get();
+    // Save histogram
+    string hist_name = "../results/lbp_hist_" + img_name;
+    imwrite(hist_name, histImage);
     return 0;
 }
 
