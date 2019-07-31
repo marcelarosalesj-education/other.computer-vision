@@ -5,5 +5,7 @@ basic: basic.cpp
 lbp_detector: lbp_detector.cpp
 	g++ -std=c++17 lbp_detector.cpp lbp.cpp histogram.cpp `pkg-config opencv --cflags --libs`
 
+webcam: webcam.cpp
+	g++ -std=c++17 webcam.cpp `pkg-config opencv --cflags --libs`
 clean:
 	rm a.out
