@@ -7,5 +7,9 @@ lbp_detector: lbp_detector.cpp
 
 webcam: webcam.cpp
 	g++ -std=c++17 webcam.cpp `pkg-config opencv --cflags --libs`
+
+candidates: candidates.cpp
+	g++ -std=c++17 candidates.cpp sliding_window.cpp `pkg-config opencv --cflags --libs`
+
 clean:
 	rm a.out
